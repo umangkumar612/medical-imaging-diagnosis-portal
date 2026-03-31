@@ -84,9 +84,9 @@ export default function MedicalChatbot() {
                     {msg.role === "bot" ? <Bot className="w-3.5 h-3.5 text-primary" /> : <User className="w-3.5 h-3.5 text-muted-foreground" />}
                   </div>
                   <div className={`max-w-[80%] rounded-xl px-3 py-2 text-sm ${msg.role === "bot" ? "bg-secondary text-secondary-foreground" : "bg-primary text-primary-foreground"}`}>
-                    <ReactMarkdown className="prose prose-sm prose-invert max-w-none [&_p]:m-0 [&_ul]:my-1 [&_li]:my-0">
-                      {msg.content}
-                    </ReactMarkdown>
+                    <div className="prose prose-sm prose-invert max-w-none [&_p]:m-0 [&_ul]:my-1 [&_li]:my-0">
+                      <ReactMarkdown>{msg.content}</ReactMarkdown>
+                    </div>
                   </div>
                 </div>
               ))}
